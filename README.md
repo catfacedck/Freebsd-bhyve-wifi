@@ -54,7 +54,7 @@ ifconfig tap0 up
 truncate -s 20G disk0.img
 ```
 
-9) Run your vm: (note - nvme only for SSD disk type, otherwise use virtio-blk, uses UEFI boot) Run -
+9) Start your vm: (note - nvme only for SSD disk type, otherwise use virtio-blk, uses UEFI boot) Run -
 ```
 ifconfig tap0 up
 ```
