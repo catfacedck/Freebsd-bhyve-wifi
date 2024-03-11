@@ -47,7 +47,7 @@ ifconfig natif inet 10.0.0.1/24
 ifconfig tap0 up
 ```
 
-6) Ensure Tiger VNC Viewer (pkg add tigervnc-viewer) or GTK-VNC Viewer (pkg add gtk-vnc) is installed.
+6) Ensure Tiger VNC Viewer (```pkg install tigervnc-viewer```) or GTK-VNC Viewer (```pkg install gtk-vnc```) is installed.
 
 7) To create disk0.img of size 20G:
 ```
