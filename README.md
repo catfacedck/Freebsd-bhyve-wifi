@@ -3,13 +3,13 @@
 Guest with WiFi host networking that uses pf.
 In order to support WiFi from the host, provisioning is a bit more complicated than when using wired Ethernet on the host (see the handbook) as WiFi interfaces cannot support multiple IP addresses.
 
-This WiFi freebsd 14-stable host/guest install tested with*BSD guests.
+A. This WiFi freebsd 14-stable laptop host install tested with *BSD guests.
+	
+	- Freebsd host is assigned IP address 10.0.0.1/24 while guest is assigned IP address 10.0.0.2/24.
 
-Freebsd host is assigned IP address 10.0.0.1/24 while guest is assigned IP address 10.0.0.2/24.
+	- **Security Note: networking with laptop WiFi passed to the guest exposes your machine(s) on the Internet.**
 
-**Security Note: networking with laptop WiFi passed to the guest exposes your machine(s) on the Internet.**
-
-vm-bhyve is not being used here and neither are zfs disks.
+	- vm-bhyve is not being used here and neither are zfs disks.
 
 **_Step-by step procedure, assuming your freebsd host WiFi is wlan1:_**
 
@@ -69,7 +69,7 @@ bhyve -ADHP -c 4 -m 4G -w -H \
         -l bootrom,/usr/local/share/uefi-firmware/BHYVE_UEFI.fd \
         vm0
 ```
-This assumes that you have previously installed your guest os from cdrom on disk0.img.
+This assumes that you have previously installed your guest os from cdrom iso on disk0.img.
 To do that add this line after the "hostbridge" line
 
 ```
