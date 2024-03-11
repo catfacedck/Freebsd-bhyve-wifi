@@ -38,7 +38,7 @@ sysctl net.link.tap.up_on_open=1
 ```
 (add permanently in /etc/sysctl.conf -> net.link.tap.up_on_open=1)
 
-4) Add the following network taps on the host:
+4) Add the following network bridge/tap on the host:
 ```
 ifconfig bridge create name natif up
 ifconfig tap0 create up 
