@@ -60,10 +60,13 @@ To do that add this line after the "hostbridge" line
 Run the iso installer to install on disk0.img.
 
 7) Run TigerVNC viewer (if installed) from your applications menu or a shell as shown here:
+   
    vncviewer -SendClipboard -AcceptClipboard -LowColorLevel -QualityLevel 6 0.0.0.0:5900 &
 
-8) Provision the network on the guest:
+9) Provision the network on the guest:
+    
 ifconfig vtnet0 inet 10.0.0.2/24 netmask 255.255.255.0
+
 ifconfig route add default 10.0.0.1
 
 Verify that all works:
@@ -90,6 +93,7 @@ vtnet0: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST> metric 0 mtu 
 	inet 10.0.0.2 netmask 0xffffff00 broadcast 10.0.0.255
 	media: Ethernet 1000baseT <full-duplex>
 	status: active
+ 
 lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> metric 0 mtu 16384
 	options=43<RXCSUM,TXCSUM,RSS>
 	inet 127.0.0.1 netmask 0xff000000
