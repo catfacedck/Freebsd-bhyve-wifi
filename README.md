@@ -7,7 +7,7 @@ A. This WiFi freebsd 14-stable laptop host install tested with *BSD guests.
 	
 	- Freebsd host is assigned IP address 10.0.0.1/24 while guest is assigned IP address 10.0.0.2/24.
 
-	- **Security Note: networking with laptop WiFi passed to the guest exposes your machine(s) on the Internet.**
+	- Security Note: networking with laptop WiFi passed to the guest exposes your machine(s) on the Internet.
 
 	- vm-bhyve is not being used here and neither are zfs disks.
 
