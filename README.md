@@ -1,9 +1,9 @@
 # Freebsd-bhyve WiFi on host laptop
 
-Guest with WiFi host networking that uses pf.
+Guest with WiFi host networking that uses packet filter (pf).
 In order to support WiFi from the host, provisioning is a bit more complicated than when using wired Ethernet on the host (see the handbook) as WiFi interfaces cannot support multiple IP addresses.
 
-A. This WiFi freebsd 14-stable laptop host install tested with *BSD guests.
+A. This WiFi freebsd 14-stable laptop host install tested with freebsd, openbsd, and dragonflybsd guests.
 	
 	- Freebsd host is assigned IP address 10.0.0.1/24 while guest is assigned IP address 10.0.0.2/24.
 
