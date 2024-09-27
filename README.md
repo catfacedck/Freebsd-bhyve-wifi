@@ -47,14 +47,14 @@ ifconfig natif inet 10.0.0.1/24
 ifconfig tap0 up
 ```
 
-6) Ensure Tiger VNC Viewer (```pkg install tigervnc-viewer```) or GTK-VNC Viewer (```pkg install gtk-vnc```) is installed.
+5) Ensure Tiger VNC Viewer (```pkg install tigervnc-viewer```) or GTK-VNC Viewer (```pkg install gtk-vnc```) is installed.
 
-7) To create disk0.img of size 20G:
+6) To create disk0.img of size 20G:
 ```
 truncate -s 20G disk0.img
 ```
 
-9) Start your vm: (note - nvme only for SSD disk type, otherwise use virtio-blk, uses UEFI boot) Run -
+7) Start your vm: (note - nvme only for SSD disk type, otherwise use virtio-blk, uses UEFI boot) Run -
 ```
 ifconfig tap0 up
 ```
@@ -77,7 +77,7 @@ To do that add this line after the "hostbridge" line
 ```
 Run the iso installer to install on disk0.img from inside your guest os.
 
-7) Run TigerVNC viewer (if installed) from your applications menu or a shell as shown here:
+8) Run TigerVNC viewer (if installed) from your applications menu or a shell as shown here:
 ``` 
    vncviewer -SendClipboard -AcceptClipboard -LowColorLevel -QualityLevel 6 0.0.0.0:5900 &
 ```
