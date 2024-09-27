@@ -85,7 +85,7 @@ Run the iso installer to install on disk0.img from inside your guest os.
 9) Provision the network on the guest:
 ```    
 ifconfig vtnet0 inet 10.0.0.2/24 netmask 255.255.255.0
-ifconfig route add default 10.0.0.1
+route add default 10.0.0.1
 ```
 
 Verify that all works:
